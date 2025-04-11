@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script>
+    
+    
+    <style>
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 1700px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <ul class="nav nav-tabs nav-justified" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" data-bs-toggle="tab" href="#mainMenu">Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#InventoryMenu">Inventory</a>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="mainMenu" class="container tab-pane fade show active">
+                <br />
+                <div>
+                    <button onclick="GetAllData()">Refresh</button>
+                </div>
+                <br />
+                <div id="imageContainer" style="position: relative; display: inline-block;">
+                    <img src="Pictures/layout.jpg" id="mainImage" style="width: 800px; height: auto;" />
+                  </div>
+                <div id="forkInfo">
+
+                </div>
+            </div>
+            
+            <div id="InventoryMenu" class="container tab-pane fade">
+                <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+                <div class="row mt-5">
+                    <div class="col-2">
+                        <div class="mb-1 text-center">Forklifts</div>
+                        <ul class="list-group shadow-sm" id="forkListGroup">
+                        </ul>
+                        <div class="mt-2">
+                            <button class="btn btn-primary shadow-sm" type="button" id="newForkBtn">+</button>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <ul class="list-group shadow-sm" id="forkInfoGroup">
+                        </ul>
+                    </div>
+                    <div class="col-3">
+                        <div class="mb-1 text-center" id="forkMoreInfoTitle"> </div>
+                        <div class="mt-2" id="forkMoreInfo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="dashboard.js"></script>
+    <script src="inventoryTab.js"></script>
+
+</body>
+
+</html>
