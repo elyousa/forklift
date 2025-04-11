@@ -6,27 +6,7 @@ A full-stack web application for monitoring forklift status and location in real
 
 ## 📦 Project Structure
 
-forklift/
-├── Server/
-│   ├── app.js                 # Express backend with WebSocket support
-│   ├── dbService.js           # Database abstraction
-│   ├── schema.sql             # MySQL database schema
-│   ├── init-user.sql          
-│   ├── Dockerfile             # Backend Docker setup
-│   ├── docker-compose.yml     # Full-stack orchestration
-│   ├── .env                   # Environment configuration
-│   ├── .dockerignore          # Docker ignore patterns
-│   ├── package.json           # Backend dependencies
-│   ├── public/                # Frontend UI
-│   │   ├── index.html
-│   │   ├── dashboard.js
-│   │   ├── inventoryTab.js
-│   │   └── Pictures/
-│   │       ├── glift.png
-│   │       ├── rlift.png
-│   │       ├── ylift.png
-│   │       └── layout.jpg
-│   └── wait-for.sh            # Script to wait for DB before booting app
+<pre> ```text forklift/ ├── Server/ │ ├── app.js # Express backend with WebSocket support │ ├── dbService.js # Database abstraction │ ├── schema.sql # MySQL database schema │ ├── init-user.sql │ ├── Dockerfile # Backend Docker setup │ ├── docker-compose.yml # Full-stack orchestration │ ├── .env # Environment configuration │ ├── .dockerignore # Docker ignore patterns │ ├── package.json # Backend dependencies │ ├── public/ # Frontend UI (formerly "Client") │ │ ├── index.html │ │ ├── dashboard.js │ │ ├── inventoryTab.js │ │ └── Pictures/ │ │ ├── glift.png │ │ ├── rlift.png │ │ ├── ylift.png │ │ └── layout.jpg │ └── wait-for.sh # Script to wait for DB before booting app ``` </pre>
 
 ---
 
